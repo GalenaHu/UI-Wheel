@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <title>Wheel</title>
     <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="//at.alicdn.com/t/font_1199326_milrwmksrq.js"></script>
     <style>
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    body {
+        margin: 20px;
     }
 
     :root {
@@ -27,7 +32,14 @@
 
 <body>
     <div id="app">
-        <g-button></g-button>
+        <w-button :loading="loadingSwitch1" @click="loadingSwitch1 = !loadingSwitch1">按钮</w-button>
+        <w-button :loading="loadingSwitch2" @click="loadingSwitch2 = !loadingSwitch2" icon="setting" icon-position="left">按钮</w-button>
+        <w-button :loading="loadingSwitch3" @click="loadingSwitch3 = !loadingSwitch3" icon="setting" icon-position="right">按钮</w-button>
+        <w-button-group>
+            <w-button icon="left" icon-position="left">上一页</w-button>
+            <w-button>更多</w-button>
+            <w-button icon="right" icon-position="right">下一页</w-button>
+        </w-button-group>
     </div>
     <script src='./src/app.js'></script>
 </body>

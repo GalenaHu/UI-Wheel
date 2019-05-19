@@ -1,17 +1,61 @@
 <template>
-    <button class="g-button">按钮</button>
+    <button class="w-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+        <w-icon v-if="loading" class="loading" name="loading"></w-icon>
+        <w-icon v-if="icon && !loading" :name="icon"></w-icon>
+        <div class="content">
+            <slot></slot>
+        </div>
+    </button>
 </template>
 <script>
-export default {}
+export default {
+    props: {
+        icon: {},
+        loading: {
+            type: Boolean,
+            default: false
+        },
+        iconPosition: {
+            type: String,
+            default: 'left',
+            //属性检查
+            validator(value) {
+                return !(value !== 'left' && value !== 'right')
+            }
+        }
+    }
+}
 </script>
 <style lang="scss">
-.g-button {
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.w-button {
     font-size: var(--font-size);
     height: var(--button-height);
     padding: 0 1em;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     background: var(--button-bg);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+    >.w-icon {
+        margin-right: 0.3em;
+    }
+
+    >.content {
+        line-height: var(--font-size);
+    }
 
     &:hover {
         border-color: var(--border-color-hover);
@@ -24,5 +68,21 @@ export default {}
     &:focus {
         outline: none;
     }
+
+    &.icon-right {
+        >.w-icon {
+            order: 2;
+            margin-left: 0.3em;
+            margin-right: 0;
+        }
+
+        >.content {
+            order: 1;
+        }
+    }
+}
+
+.loading {
+    animation: spin 1s infinite linear;
 }
 </style>
