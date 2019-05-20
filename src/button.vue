@@ -8,7 +8,11 @@
     </button>
 </template>
 <script>
+import Icon from './icon.vue'
 export default {
+    components: {
+        'w-icon': Icon
+    },
     props: {
         icon: {},
         loading: {
@@ -67,6 +71,14 @@ export default {
 
     &:focus {
         outline: none;
+    }
+
+    >.w-icon {
+        order: 1;
+    }
+
+    >.content {
+        order: 2;
     }
 
     &.icon-right {
