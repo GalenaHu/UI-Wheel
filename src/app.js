@@ -15,6 +15,11 @@ new Vue({
         loadingSwitch1: false,
         loadingSwitch2: false,
         loadingSwitch3: false,
+    },
+    methods: {
+        inputChange(e) {
+            console.log(e.target.value)
+        }
     }
 })
 
