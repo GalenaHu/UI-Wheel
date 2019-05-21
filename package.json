@@ -1,6 +1,6 @@
 {
   "name": "ui-wheel-demo-1",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "a ui wheel",
   "main": "dist/index.js",
   "scripts": {
