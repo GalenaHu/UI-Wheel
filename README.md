@@ -10,19 +10,14 @@
 
 1. 添加CSS样式
 
-   使用本框架前请在CSS中开启border-box
+   使用本框架前请在CSS中开启border-box，并设置默认颜色变量
 
    ```css
    *, *::before, *::after {box-sizing: boder-box}
-   ```
-
-   并设置默认颜色变量
-
-   ```CSS
    :root {
-       --button-height: 32px;
+    --button-height: 32px;
        --font-size: 14px;
-       --button-bg: white;
+    --button-bg: white;
        --button-active-bg: #eee;
        --border-radius: 4px;
        --color: #333;
@@ -30,7 +25,7 @@
        --border-color-hover: #666;
    }
    ```
-
+   
 2. 安装
 
    ```bash
@@ -42,7 +37,14 @@
    ```vue
    <template>
        <div id="app">
-           <w-button>欢迎</w-button>
+           <w-button icon="setting">按钮</w-button>
+           <w-button :loading="true" icon-position="left">按钮</w-button>
+           <w-button icon="setting" icon-position="right">按钮</w-button>
+           <w-button-group>
+               <w-button icon="left" icon-position="left">上一页</w-button>
+               <w-button>更多</w-button>
+               <w-button icon="right" icon-position="right">下一页</w-button>
+           </w-button-group>
        </div>
    </template>
    <script>
@@ -50,12 +52,14 @@
    import 'ui-wheel-demo-1/dist/index.css'
    
    export default {
-       name: 'app',
+    name: 'app',
        components: {
-           'w-button': Button
+           'w-button': Button,
+           'w-button-group': ButtonGroup,
+           'w-icon': Icon
        }
    }
    </script>
    ```
-
+   
    

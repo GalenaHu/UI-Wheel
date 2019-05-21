@@ -9,7 +9,7 @@ export default {
     props: ['name']
 }
 </script>
-<style>
+<style scoped>
 .w-icon {
     width: 1em;
     height: 1em;
