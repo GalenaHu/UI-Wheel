@@ -31,12 +31,26 @@
 
 <body>
     <div id="app">
-        <w-input value='张三'></w-input>
-        <w-input value='李四' :disabled="true"></w-input>
-        <w-input value='王五' :readonly="true"></w-input>
-        <w-input value="钱" error="姓名不能少于两个字"></w-input>
-        <w-input value='张三' @change="inputChange"></w-input>
         <div style="margin-top: 20px">
+            <h3>grid组件</h3>
+            <w-row gutter="20">
+                <w-col span="2">2</w-col>
+                <w-col span="20" offset="2">22</w-col>
+            </w-row>
+            <w-row gutter="20">
+                <w-col span="4">2</w-col>
+                <w-col span="20">22</w-col>
+            </w-row>
+        </div>
+        <div style="margin-top: 20px">
+            <h3>input组件</h3>
+            <w-input value='张三' v-model="message"></w-input>
+            <w-input value='李四' :disabled="true"></w-input>
+            <w-input value='王五' :readonly="true"></w-input>
+            <w-input value="钱" error="姓名不能少于两个字"></w-input>
+        </div>
+        <div style="margin-top: 20px">
+            <h3>button组件</h3>
             <w-button :loading="loadingSwitch1" @click="loadingSwitch1 = !loadingSwitch1">按钮</w-button>
             <w-button :loading="loadingSwitch2" @click="loadingSwitch2 = !loadingSwitch2" icon="setting" icon-position="left">按钮</w-button>
             <w-button :loading="loadingSwitch3" @click="loadingSwitch3 = !loadingSwitch3" icon="setting" icon-position="right">按钮</w-button>
