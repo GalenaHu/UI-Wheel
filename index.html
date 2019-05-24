@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Wheel</title>
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <style>
@@ -33,13 +34,9 @@
     <div id="app">
         <div style="margin-top: 20px">
             <h3>grid组件</h3>
-            <w-row gutter="20">
-                <w-col span="2">2</w-col>
-                <w-col span="20" offset="2">22</w-col>
-            </w-row>
-            <w-row gutter="20">
-                <w-col span="4">2</w-col>
-                <w-col span="20">22</w-col>
+            <w-row>
+                <w-col span="10" :ipad="{span:2}">1</w-col>
+                <w-col span="12" :ipad="{span:10, offset:12}">2</w-col>
             </w-row>
         </div>
         <div style="margin-top: 20px">
