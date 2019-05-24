@@ -11,6 +11,7 @@ import Sider from './sider.vue'
 import Content from './content.vue'
 import Footer from './footer.vue'
 import Toast from './toast.vue'
+import Plugin from './plugin.js'
 
 Vue.component('w-button', Button)
 Vue.component('w-icon', Icon)
@@ -24,6 +25,7 @@ Vue.component('w-sider', Sider)
 Vue.component('w-content', Content)
 Vue.component('w-footer', Footer)
 Vue.component('w-toast', Toast)
+Vue.use(Plugin)
 
 new Vue({
     el: '#app',
@@ -33,7 +35,9 @@ new Vue({
         loadingSwitch3: false,
         message: ''
     },
-    mounted() {
-        this.$toast()
+    methods: {
+        showToast(info) {
+            this.$toast(info)
+        }
     }
 })
