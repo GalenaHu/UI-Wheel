@@ -27,11 +27,27 @@
         --border-color: #999;
         --border-color-hover: #666;
     }
+
+    .demo {
+        border: 1px solid red;
+        min-height: 100px;
+    }
     </style>
 </head>
 
 <body>
     <div id="app">
+        <div style="margin-top: 20px">
+            <h3>layout组件</h3>
+            <w-layout class="demo" style="height: 100vh">
+                <w-header class="demo">header</w-header>
+                <w-layout>
+                    <w-sider class='demo'>sider</w-sider>
+                    <w-content class="demo"> content</w-content>
+                </w-layout>
+                <w-footer class="demo">footer</w-footer>
+            </w-layout>
+        </div>
         <div style="margin-top: 20px">
             <h3>grid组件</h3>
             <w-row>
