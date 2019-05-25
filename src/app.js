@@ -36,8 +36,33 @@ new Vue({
         message: ''
     },
     methods: {
-        showToast(info) {
-            this.$toast(info)
-        }
+        showToast1(info) {
+            this.$toast(info, {
+                closeButton: {
+                    exist: true,
+                    text: 'ok'
+                },
+                position: 'top',
+                autoClose: 1,
+            })
+        },
+        showToast2(info) {
+            this.$toast(info, {
+                closeButton: {
+                    exist: true,
+                    text: 'ok'
+                },
+                position: 'middle'
+            })
+        },
+        showToast3(info) {
+            this.$toast(info, {
+                closeButton: {
+                    exist: true,
+                    text: 'ok'
+                },
+                position: 'bottom'
+            })
+        },
     }
 })
