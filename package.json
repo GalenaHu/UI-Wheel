@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/GalenaHu/UI-Wheel#readme",
   "dependencies": {
+    "@vue/test-utils": "^1.0.0-beta.29",
     "icon.vue": "^0.1.5",
     "sass": "^1.20.1",
     "vue": "^2.6.10",
