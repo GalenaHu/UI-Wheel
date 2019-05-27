@@ -46,7 +46,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$active-tab-color: red;
+$active-tab-color: #3EAF7C;
 $disabled-tab-color: #ddd;
 
 .tabs-item {

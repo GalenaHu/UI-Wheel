@@ -123,6 +123,7 @@ $border-radius: 4px;
     display: inline-block;
     vertical-align: top;
     position: relative;
+
 }
 
 .content-wrapper {
@@ -131,7 +132,7 @@ $border-radius: 4px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     padding: 0.5em 1em;
-
+    z-index: 50;
     max-width: 20em;
     word-break: break-all;
     line-height: 1.8;

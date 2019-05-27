@@ -23,7 +23,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 $tab-height: 40px;
-$active-tab-color: red;
+$active-tab-color: #3EAF7C;
 
 .tabs-head {
     display: flex;

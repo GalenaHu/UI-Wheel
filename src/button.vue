@@ -2,7 +2,7 @@
     <button class="w-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
         <w-icon v-if="loading" class="loading" name="loading"></w-icon>
         <w-icon v-if="icon && !loading" :name="icon"></w-icon>
-        <div class="content">
+        <div class="button-content">
             <slot></slot>
         </div>
     </button>
@@ -67,7 +67,7 @@ $border-color-hover: #666;
         margin-right: 0.3em;
     }
 
-    >.content {
+    >.button-content {
         line-height: $font-size;
     }
 
@@ -87,7 +87,7 @@ $border-color-hover: #666;
         order: 1;
     }
 
-    >.content {
+    >.button-content {
         order: 2;
     }
 
@@ -98,7 +98,7 @@ $border-color-hover: #666;
             margin-right: 0;
         }
 
-        >.content {
+        >.button-content {
             order: 1;
         }
     }

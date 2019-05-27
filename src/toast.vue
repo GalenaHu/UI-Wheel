@@ -118,6 +118,7 @@ $animation-duration: 0.5s;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 50;
 
 
     &.position-top {
