@@ -1,6 +1,6 @@
 <template>
     <div>
-        <w-layout class="demo" style="height: 30vh">
+        <w-layout style="height: 30vh">
             <w-header class="demo">header</w-header>
             <w-layout>
                 <w-sider class='demo'>sider</w-sider>

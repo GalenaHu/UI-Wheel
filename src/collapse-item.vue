@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-    name: "GuluCollapseItem",
+    name: "wheel-CollapseItem",
     props: {
         title: {
             type: String,

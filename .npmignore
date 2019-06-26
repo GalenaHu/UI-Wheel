@@ -1,0 +1,13 @@
+.cache/
+docs/
+node_modules/
+src/
+test/
+.*
+*.yml
+build/
+*.sh
+index.html
+karma.conf.js
+yarn.lock
+

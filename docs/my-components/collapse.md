@@ -2,7 +2,8 @@
 title: Collapse
 ---
 # Collapse
-
+### 样式
+---
 <collapse-demos/>
 
 ```vue
@@ -16,8 +17,8 @@ title: Collapse
     </div>
 </template>
 <script>
-import Collapse from '../../../src/collapse.vue'
-import CollapseItem from '../../../src/collapse-item.vue'
+import { Collapse, CollapseItem } from 'ui-wheel-demo-1'
+import 'ui-wheel-demo-1/dist/index.css'
 
 export default {
     components: {
@@ -32,3 +33,9 @@ export default {
 }
 </script>
 ```
+
+### API
+* **single**: 是否只打开一个tab，接受布尔值，默认为false
+* **selected**: 选中tab对应的name值，接受数组
+* **title**: tab标题，接受字符串
+* **name**: 对应的tab名，接受字符串

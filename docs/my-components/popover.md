@@ -2,7 +2,8 @@
 title: Popover
 ---
 # Popover
-
+### 样式
+---
 <popover-demos/>
 
 ```vue
@@ -64,8 +65,8 @@ title: Popover
     </div>
 </template>
 <script>
-import Button from '../../../src/button.vue'
-import Popover from '../../../src/popover.vue'
+import { Button, Popover } from 'ui-wheel-demo-1'
+import 'ui-wheel-demo-1/dist/index.css'
 
 export default {
     components: {
@@ -75,3 +76,7 @@ export default {
 }
 </script>
 ```
+
+### API
+* **position**: 弹出层位置，接受字符串，包括'top', 'bottom', 'left', 'right'，默认为'top'
+* **trigger**: 弹出层触发方式，接受字符串，包括'click', 'hover'，默认为'click'

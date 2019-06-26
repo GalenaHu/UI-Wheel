@@ -4,7 +4,7 @@
             <w-tabs-head>
                 <w-tabs-item name="tab1">Tab1</w-tabs-item>
                 <w-tabs-item name="tab2">Tab2</w-tabs-item>
-                <w-tabs-item name="tab3">Tab3</w-tabs-item>
+                <w-tabs-item name="tab3" disabled>Tab3</w-tabs-item>
             </w-tabs-head>
             <w-tabs-body>
                 <w-tabs-pane name="tab1">Tab1内容</w-tabs-pane>

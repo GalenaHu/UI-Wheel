@@ -2,13 +2,14 @@
 title: Layout
 ---
 # Layout
-
+### 样式
+---
 <layout-demos/>
 
 ```vue
 <template>
     <div>
-        <w-layout class="demo" style="height: 30vh">
+        <w-layout style="height: 30vh">
             <w-header class="demo">header</w-header>
             <w-layout>
                 <w-sider class='demo'>sider</w-sider>
@@ -19,11 +20,8 @@ title: Layout
     </div>
 </template>
 <script>
-import Layout from '../../../src/layout.vue'
-import Header from '../../../src/header.vue'
-import Sider from '../../../src/sider.vue'
-import Content from '../../../src/content.vue'
-import Footer from '../../../src/footer.vue'
+import { Layout, Header, Sider, Content, Footer } from 'ui-wheel-demo-1'
+import 'ui-wheel-demo-1/dist/index.css'
 
 export default {
     components: {

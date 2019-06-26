@@ -1,7 +1,7 @@
 <template>
     <button class="w-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
-        <w-icon v-if="loading" class="loading" name="loading"></w-icon>
-        <w-icon v-if="icon && !loading" :name="icon"></w-icon>
+        <w-icon class="icon" v-if="icon && !loading" :name="icon"></w-icon>
+        <w-icon class="loading icon" v-if="loading" name="loading"></w-icon>
         <div class="button-content">
             <slot></slot>
         </div>

@@ -2,7 +2,8 @@
     <div>
         <w-button>按钮</w-button>
         <w-button icon="setting" icon-position="left">按钮</w-button>
-        <w-button icon="loading" icon-position="right">按钮</w-button>
+        <w-button loading icon-position="right">按钮</w-button>
+        <w-button disabled>按钮</w-button>
         <w-button-group>
             <w-button icon="left" icon-position="left">上一页</w-button>
             <w-button>更多</w-button>

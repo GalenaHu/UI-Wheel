@@ -2,7 +2,8 @@
 title: Tabs
 ---
 # Tabs
-
+### 样式
+---
 <tabs-demos/>
 
 ```vue
@@ -12,7 +13,7 @@ title: Tabs
             <w-tabs-head>
                 <w-tabs-item name="tab1">Tab1</w-tabs-item>
                 <w-tabs-item name="tab2">Tab2</w-tabs-item>
-                <w-tabs-item name="tab3">Tab3</w-tabs-item>
+                <w-tabs-item name="tab3" disabled>Tab3</w-tabs-item>
             </w-tabs-head>
             <w-tabs-body>
                 <w-tabs-pane name="tab1">Tab1内容</w-tabs-pane>
@@ -23,11 +24,8 @@ title: Tabs
     </div>
 </template>
 <script>
-import Tabs from '../../../src/tabs.vue'
-import TabsHead from '../../../src/tabs-head.vue'
-import TabsBody from '../../../src/tabs-body.vue'
-import TabsItem from '../../../src/tabs-item.vue'
-import TabsPane from '.../../../src/tabs-pane.vue'
+import { Tabs, TabsHead, TabsItem, TabsBody, TabsPane } from 'ui-wheel-demo-1'
+import 'ui-wheel-demo-1/dist/index.css'
 
 export default {
     components: {
@@ -45,3 +43,8 @@ export default {
 }
 </script>
 ```
+### API
+---
+* **selected**: 默认选中的标签name，接受字符串，为必须属性
+* **name**: 对应的标签名，接受字符串
+* **disabled**: 禁用标签页，接受布尔值，默认false
