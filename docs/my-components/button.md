@@ -5,8 +5,9 @@ title: Button
 
 ### 样式
 ---
+<ClientOnly>
 <button-demos/>
-
+</ClientOnly>
 ```vue
 <template>
     <div>
