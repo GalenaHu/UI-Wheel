@@ -28,7 +28,7 @@
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.4.1",
     "icon.vue": "^0.1.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass": "^1.20.1",
     "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
